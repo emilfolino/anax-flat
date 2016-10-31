@@ -1,4 +1,4 @@
 Contact
 ==============================================
 
-Any questions about this site can be emailed to [Mikael Roos](https://mikaelroos.se) on (mos@dbwebb.se).
+Any questions about this site can be emailed to [Emil Folino](https://github.com/emilfolino) @ (efo@bth.se or @emilfolino on twitter).
