@@ -32,6 +32,13 @@ return [
                 "url"   => $this->di->get("url")->create("test"),
                 "title" => t("Testing this website")
             ],
+
+            "markdown" => [
+                "text"  => t("Markdown"),
+                "url"   => $this->di->get("url")->create("markdown"),
+                "title" => t("Marking down this website")
+            ],
+
         ],
     ],
 
