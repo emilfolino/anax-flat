@@ -3,6 +3,36 @@
  * Config-file for navigation bar.
  *
  */
+
+
+$all_items = [
+    "report" => [
+        "text"  => t("Report"),
+        "url"   => $this->di->get("url")->create("report"),
+        "title" => t("Reports from kmom assignments"),
+        "mark-if-parent" => true,
+    ],
+
+    "about" => [
+        "text"  => t("About"),
+        "url"   => $this->di->get("url")->create("about"),
+        "title" => t("About this website")
+    ],
+
+    "test" => [
+        "text"  => t("Test"),
+        "url"   => $this->di->get("url")->create("test"),
+        "title" => t("Testing this website")
+    ],
+
+    "markdown" => [
+        "text"  => t("Markdown"),
+        "url"   => $this->di->get("url")->create("markdown"),
+        "title" => t("Marking down this website")
+    ],
+];
+
+
 return [
 
     // Name of this menu
@@ -12,39 +42,10 @@ return [
         "class" => "rm-default rm-desktop",
 
         // Here comes the menu structure
-        "items" => [
-
-            "report" => [
-                "text"  => t("Report"),
-                "url"   => $this->di->get("url")->create("report"),
-                "title" => t("Reports from kmom assignments"),
-                "mark-if-parent" => true,
-            ],
-
-            "about" => [
-                "text"  => t("About"),
-                "url"   => $this->di->get("url")->create("about"),
-                "title" => t("About this website")
-            ],
-
-            "test" => [
-                "text"  => t("Test"),
-                "url"   => $this->di->get("url")->create("test"),
-                "title" => t("Testing this website")
-            ],
-
-            "markdown" => [
-                "text"  => t("Markdown"),
-                "url"   => $this->di->get("url")->create("markdown"),
-                "title" => t("Marking down this website")
-            ],
-
-        ],
+        "items" => $all_items,
     ],
 
 
-
-/*
     // Used as menu together with responsive menu
     // Name of this menu
     "navbarMax" => [
@@ -54,23 +55,9 @@ return [
         "class" => "rm-default rm-mobile",
 
         // Here comes the menu structure
-        "items" => [
-
-            "report" => [
-                "text"  => t("Report"),
-                "url"   => $this->di->get("url")->create("report"),
-                "title" => t("Reports from kmom assignments"),
-                "mark-if-parent" => true,
-            ],
-
-            "about" => [
-                "text"  => t("About"),
-                "url"   => $this->di->get("url")->create("about"),
-                "title" => t("About this website")
-            ],
-        ],
+        "items" => $all_items,
     ],
-*/
+
 
 
     /**
