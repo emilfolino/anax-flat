@@ -19,16 +19,22 @@ $all_items = [
         "title" => t("About this website")
     ],
 
-    "test" => [
-        "text"  => t("Test"),
-        "url"   => $this->di->get("url")->create("test"),
-        "title" => t("Testing this website")
-    ],
-
     "markdown" => [
         "text"  => t("Markdown"),
         "url"   => $this->di->get("url")->create("markdown"),
         "title" => t("Marking down this website")
+    ],
+
+    "grid" => [
+        "text"  => t("Grid"),
+        "url"   => $this->di->get("url")->create("grid"),
+        "title" => t("The gridding")
+    ],
+
+    "typography" => [
+        "text"  => t("Typography"),
+        "url"   => $this->di->get("url")->create("typography"),
+        "title" => t("Typing down this website")
     ],
 ];
 
