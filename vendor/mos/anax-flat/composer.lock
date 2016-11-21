@@ -4,8 +4,8 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "hash": "3c1ff99de012d40456639105286e8958",
-    "content-hash": "1fab37de6bd944bacfcc4d3edd7e3eaa",
+    "hash": "46fabd55d99367551f389f7bb3720106",
+    "content-hash": "fa8245428f2880faeba4f8125a1b1356",
     "packages": [
         {
             "name": "ezyang/htmlpurifier",
@@ -104,16 +104,16 @@
         },
         {
             "name": "michelf/php-smartypants",
-            "version": "dev-lib",
+            "version": "1.6.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/michelf/php-smartypants.git",
-                "reference": "e4a873d4a4e0f3dd6fbf5b9e017362f174eb28df"
+                "reference": "674badae316a957173c67dd3184e21cb6807d7fb"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/michelf/php-smartypants/zipball/e4a873d4a4e0f3dd6fbf5b9e017362f174eb28df",
-                "reference": "e4a873d4a4e0f3dd6fbf5b9e017362f174eb28df",
+                "url": "https://api.github.com/repos/michelf/php-smartypants/zipball/674badae316a957173c67dd3184e21cb6807d7fb",
+                "reference": "674badae316a957173c67dd3184e21cb6807d7fb",
                 "shasum": ""
             },
             "require": {
@@ -138,16 +138,16 @@
                 {
                     "name": "Michel Fortin",
                     "email": "michel.fortin@michelf.ca",
-                    "homepage": "http://michelf.ca/",
+                    "homepage": "https://michelf.ca/",
                     "role": "Developer"
                 },
                 {
                     "name": "John Gruber",
-                    "homepage": "http://daringfireball.net/"
+                    "homepage": "https://daringfireball.net/"
                 }
             ],
             "description": "PHP SmartyPants",
-            "homepage": "http://michelf.ca/projects/php-smartypants/",
+            "homepage": "https://michelf.ca/projects/php-smartypants/",
             "keywords": [
                 "dashes",
                 "quotes",
@@ -155,20 +155,20 @@
                 "typographer",
                 "typography"
             ],
-            "time": "2013-08-02 10:48:47"
+            "time": "2016-10-10 18:14:08"
         },
         {
             "name": "mos/anax",
-            "version": "v2.5.11",
+            "version": "v2.5.20",
             "source": {
                 "type": "git",
                 "url": "https://github.com/mosbth/anax.git",
-                "reference": "2b3d40ee39f8d4ec32cb0765b4c433ff312b9713"
+                "reference": "748128a132ef49ed743c1ddbeff8cf7c705c4e07"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/mosbth/anax/zipball/2b3d40ee39f8d4ec32cb0765b4c433ff312b9713",
-                "reference": "2b3d40ee39f8d4ec32cb0765b4c433ff312b9713",
+                "url": "https://api.github.com/repos/mosbth/anax/zipball/748128a132ef49ed743c1ddbeff8cf7c705c4e07",
+                "reference": "748128a132ef49ed743c1ddbeff8cf7c705c4e07",
                 "shasum": ""
             },
             "require": {
@@ -209,7 +209,7 @@
                 "micro",
                 "mvc"
             ],
-            "time": "2016-09-12 21:00:06"
+            "time": "2016-11-07 11:04:26"
         },
         {
             "name": "mos/cimage",
@@ -271,28 +271,30 @@
         },
         {
             "name": "mos/ctextfilter",
-            "version": "v1.2.13",
+            "version": "v1.2.16",
             "source": {
                 "type": "git",
                 "url": "https://github.com/mosbth/ctextfilter.git",
-                "reference": "d79520290b8d48a6f62547391f01a4b68f16ed29"
+                "reference": "4c5b2bd3f76798665e2dc7207281cb4882098692"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/mosbth/ctextfilter/zipball/d79520290b8d48a6f62547391f01a4b68f16ed29",
-                "reference": "d79520290b8d48a6f62547391f01a4b68f16ed29",
+                "url": "https://api.github.com/repos/mosbth/ctextfilter/zipball/4c5b2bd3f76798665e2dc7207281cb4882098692",
+                "reference": "4c5b2bd3f76798665e2dc7207281cb4882098692",
                 "shasum": ""
             },
             "require": {
                 "ezyang/htmlpurifier": "4.*",
                 "michelf/php-markdown": "1.6.*",
-                "michelf/php-smartypants": "1.6.x-dev",
+                "michelf/php-smartypants": "1.6.*",
                 "php": ">=5.4",
                 "scrivo/highlight.php": "^9.0"
             },
             "suggest": {
                 "ext-json": "*",
-                "ext-yaml": "*"
+                "ext-yaml": "*",
+                "mustangostang/spyc": "^0.6",
+                "symfony/yaml": "^3.1"
             },
             "type": "library",
             "extra": {
@@ -328,7 +330,7 @@
                 "markdown",
                 "shortcode"
             ],
-            "time": "2016-08-23 11:14:57"
+            "time": "2016-10-31 12:22:27"
         },
         {
             "name": "scrivo/highlight.php",
@@ -363,14 +365,61 @@
                 "syntax"
             ],
             "time": "2016-01-01 14:08:00"
+        },
+        {
+            "name": "symfony/yaml",
+            "version": "v3.1.6",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/symfony/yaml.git",
+                "reference": "7ff51b06c6c3d5cc6686df69004a42c69df09e27"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/symfony/yaml/zipball/7ff51b06c6c3d5cc6686df69004a42c69df09e27",
+                "reference": "7ff51b06c6c3d5cc6686df69004a42c69df09e27",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=5.5.9"
+            },
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "3.1-dev"
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "Symfony\\Component\\Yaml\\": ""
+                },
+                "exclude-from-classmap": [
+                    "/Tests/"
+                ]
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Fabien Potencier",
+                    "email": "fabien@symfony.com"
+                },
+                {
+                    "name": "Symfony Community",
+                    "homepage": "https://symfony.com/contributors"
+                }
+            ],
+            "description": "Symfony Yaml Component",
+            "homepage": "https://symfony.com",
+            "time": "2016-10-24 18:41:13"
         }
     ],
     "packages-dev": [],
     "aliases": [],
     "minimum-stability": "stable",
-    "stability-flags": {
-        "michelf/php-smartypants": 20
-    },
+    "stability-flags": [],
     "prefer-stable": false,
     "prefer-lowest": false,
     "platform": [],

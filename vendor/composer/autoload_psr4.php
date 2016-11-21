@@ -6,6 +6,7 @@ $vendorDir = dirname(dirname(__FILE__));
 $baseDir = dirname($vendorDir);
 
 return array(
+    'Symfony\\Component\\Yaml\\' => array($vendorDir . '/symfony/yaml'),
     'Mos\\TextFilter\\' => array($vendorDir . '/mos/ctextfilter/src/TextFilter'),
     'Anax\\' => array($vendorDir . '/mos/anax/src'),
 );

@@ -18,16 +18,25 @@
         "docs": "http://dbwebb.se/opensource/cimage"
     },
     "require": {
-        "php": ">=5.3"
+        "php": ">=5.3",
+        "ext-gd": "*"
+    },
+    "suggest": {
+        "ext-exif": "*"
     },
     "autoload": {
-        "classmap": [
+       "files": [
+           "defines.php",
+           "functions.php"
+       ],
+       "classmap": [
             "CImage.php",
             "CHttpGet.php",
             "CRemoteImage.php",
             "CWhitelist.php",
             "CAsciiArt.php",
-            "CCache.php"
+            "CCache.php",
+            "CFastTrackCache.php"
         ]
     }
 }

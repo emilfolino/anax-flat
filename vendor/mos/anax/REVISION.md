@@ -6,6 +6,61 @@ Revision history
 History for Anax
 -----------------------------------
 
+v2.5.23 (2016-11-15)
+
+* Rework CThemeEngine to configure theme selector.
+
+
+v2.5.22 (2016-11-14)
+
+* Add backlink to content source in revision history.
+
+
+v2.5.21 (2016-11-14)
+
+* Correct theme engine to use added stylesheets and js.
+
+
+v2.5.20 (2016-11-07)
+
+* Cleanup debug info for urls with `!`.
+
+
+v2.5.19 (2016-11-07)
+
+* Treat relative urls, in documents in folder `content`, as assets when they are started with a `!`.
+
+
+v2.5.18 (2016-10-31)
+
+* Fix incoming url that has encoded characters.
+
+
+v2.5.17 (2016-10-18)
+
+* Fix mailto link using Markdown.
+
+
+v2.5.16 (2016-10-18)
+
+* Fix baseurl to relative image sources, use `asset()` to create url.
+
+
+v2.5.15 (2016-10-18)
+
+* Add baseurl to relative image sources.
+
+
+v2.5.13 (2016-10-18)
+
+* Fix `mailto:` links.
+
+
+v2.5.12 (2016-10-14)
+
+* Fix that author is displayed.
+
+
 v2.5.11 (2016-09-12)
 
 * Add `CThemeEngine::appendToVariable()`.

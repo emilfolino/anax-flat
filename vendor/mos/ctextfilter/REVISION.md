@@ -2,6 +2,30 @@ History
 ===================================
 
 
+v1.2.17 (2016-11-14)
+-----------------------------------
+
+* Enable optional backlink to document source in revision history.
+
+
+v1.2.16 (2016-10-31)
+-----------------------------------
+
+* Add support for YAML using `symfony/yaml` or `mustangostang/spyc` if missing `php5-yaml`.
+
+
+v1.2.15 (2016-10-18)
+-----------------------------------
+
+* Add baseurl to relative image sources.
+
+
+v1.2.14 (2016-10-14)
+-----------------------------------
+
+* Move from beta in michelf/php-smartypants.
+
+
 v1.2.13 (2016-08-23)
 -----------------------------------
 

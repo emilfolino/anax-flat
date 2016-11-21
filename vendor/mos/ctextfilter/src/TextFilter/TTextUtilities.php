@@ -175,6 +175,31 @@ trait TTextUtilities
 
 
     /**
+     * Add baseurl to all relative links in image source.
+     *
+     * @param string   $text     with content.
+     * @param string   $baseurl  as string to prepend relative link.
+     * @param callable $callback Use to create url from route.
+     *
+     * @return string with modified text.
+     */
+    public function addBaseurlToImageSource($text, $baseurl, $callback)
+    {
+        $pattern = "#<img(.+?)src=\"([^\"]*)\"(.*?)>#";
+        
+        return preg_replace_callback(
+            $pattern,
+            function ($matches) use ($baseurl, $callback) {
+                $url = $callback($matches[2], $baseurl);
+                return "<img${matches[1]}src=\"$url\"${matches[3]}>";
+            },
+            $text
+        );
+    }
+
+
+
+    /**
      * Generate revision history and add to the end of content.
      *
      * @param string $text     with content.
@@ -182,10 +207,11 @@ trait TTextUtilities
      * @param string $start    start wrap with this.
      * @param string $end      end wrap with this.
      * @param string $class    to add to ul element.
+     * @param string $source   optional url to document source.
      *
      * @return string with text and optionally added revision history.
      */
-    public function addRevisionHistory($text, $revision, $start, $end, $class)
+    public function addRevisionHistory($text, $revision, $start, $end, $class, $source = null)
     {
         
         $text  = $text . $start;
@@ -195,7 +221,16 @@ trait TTextUtilities
             $text .= "<li>$date: $info</li>\n";
         }
 
-        $text .= "</ul>\n" . $end;
+        $text .= "</ul>\n";
+
+        if ($source) {
+            $text .= "<p><a class=\"$class\" href=\"$source\">"
+            . t("Document source")
+            . "</a>.</p>\n";
+        }
+
+        $text .= $end;
+
         return $text;
     }
 

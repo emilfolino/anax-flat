@@ -351,7 +351,7 @@ class CFileBasedContent
                 // Get content for byline
                 $route = "$key/byline";
                 $data = $this->getDataForAdditionalRoute($route);
-                $byline = isset($data["content"]) ? $data["content"] : null;
+                $byline = isset($data["data"]["content"]) ? $data["data"]["content"] : null;
                 $this->meta[$key]["byline"] = $byline;
             }
         }
@@ -758,7 +758,10 @@ class CFileBasedContent
         $revisionStart = $this->config["revision-history"]["start"];
         $revisionEnd   = $this->config["revision-history"]["end"];
         $revisionClass = $this->config["revision-history"]["class"];
-         
+        $revisionSource = isset($this->config["revision-history"]["source"])
+            ? $this->config["revision-history"]["source"]
+            : null;
+
         $textFilter = $this->di->get("textFilter");
         $text = $filtered->text;
 
@@ -769,7 +772,8 @@ class CFileBasedContent
                 $content["views"]["main"]["data"]["revision"],
                 $revisionStart,
                 $revisionEnd,
-                $revisionClass
+                $revisionClass,
+                $revisionSource . "/" . $content["file"]
             );
         }
 
@@ -801,6 +805,7 @@ class CFileBasedContent
           ? $data["baseurl"]
           : null;
         $this->addBaseurl2AnchorUrls($filtered, $baseurl);
+        $this->addBaseurl2ImageSource($filtered, $baseurl);
 
         // Add excerpt and hasMore, if available
         $textFilter->addExcerpt($filtered);

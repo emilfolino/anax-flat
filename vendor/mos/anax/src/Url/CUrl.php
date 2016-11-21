@@ -95,6 +95,12 @@ class CUrl
         ) {
             // Hashtag url to local page, or query part, leave as is.
             return $uri;
+        } elseif (substr($uri, 0, 7) == "mailto:"
+            || substr(html_entity_decode($uri), 0, 7) == "mailto:") {
+            // Leave mailto links as is
+            // The odd fix is for markdown converting mailto: to UTF-8
+            // Might be a better way to solve this...
+            return $uri;
         }
 
         // Prepend uri with baseuri
