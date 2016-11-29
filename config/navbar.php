@@ -36,6 +36,30 @@ $all_items = [
         "url"   => $this->di->get("url")->create("typography"),
         "title" => t("Typing down this website")
     ],
+
+    "analysis" => [
+        "text"  => t("Analysis"),
+        "url"   => $this->di->get("url")->create("analysis"),
+        "title" => t("Analysis from kmom assignments")
+    ],
+
+    "theme-selector" => [
+        "text"  => t("Theme Selector"),
+        "url"   => $this->di->get("url")->create("theme-selector"),
+        "title" => t("Theme Selector")
+    ],
+
+    "images" => [
+        "text"  => t("Images"),
+        "url"   => $this->di->get("url")->create("images"),
+        "title" => t("Images")
+    ],
+
+    "blog" => [
+        "text"  => t("Blog"),
+        "url"   => $this->di->get("url")->create("blog"),
+        "title" => t("Blog")
+    ],
 ];
 
 

@@ -3,6 +3,7 @@
  * Config file for theme selector.
  *
  */
+
 return [
 
     "separator" => "------------------------------------------------",
